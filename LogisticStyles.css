@@ -1,0 +1,30 @@
+
+
+.section .container  {
+    text-align: center;  
+    
+}
+
+
+
+h2 {
+    padding-bottom: 50px;
+}
+
+p {
+    
+    padding-bottom: 50px;
+}
+
+.section .container .row{
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+h1 {
+    font-family:avenir;
+}
+
+.btn .btn-primary .btn-lg .btn-block {
+justify-content: flex-start;    
+}
