@@ -1,5 +1,5 @@
 body {
-	min-height: 1000px;
+	background: #000;
 }
 
 .main {
@@ -12,7 +12,7 @@ h1{
 	color: #262626;
 	font-size: 52px;
 	font-weight: 200;
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 	line-height:86px;
 }
 
@@ -27,6 +27,12 @@ h3{
 	font-size: 24px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+h4 {
+	color: #fff;
+}
+
+
 
 a{
 	font-weight: 200;
@@ -51,6 +57,18 @@ a{
 
 .home {
   margin-top: 6.5rem;
+}
+
+.masthead-brand-home h3{
+  color: #fff;
+}
+
+.home h1 {
+	color: #fff;
+}
+
+.hometitle h3 {
+	color:#fff;
 }
 
 .nav-masthead .nav-link {
@@ -85,8 +103,6 @@ a{
   }
 }
 
-
-
 /* 
 Styles for card
 */
@@ -104,6 +120,23 @@ Styles for card
   border: 5px solid black;
   border-radius: .50rem;
   padding:30px;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -152,4 +185,51 @@ Styles for card
 .inner {
   padding: 2rem;
 	text-align:center;
+}
+
+/* Background video */
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg {
+	opacity: .7;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
 }
