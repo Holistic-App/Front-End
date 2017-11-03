@@ -1,3 +1,7 @@
+body {
+	min-height: 1000px;
+}
+
 .main {
 	padding-top: 105px;
 	margin-bottom:105px;
@@ -13,10 +17,15 @@ h1{
 }
 
 h2{
-	color: #686868;
-	font-size: 20px;
-	font-weight: 300;
-	font-family: 'Poppins', sans-serif;
+	color: #262626;
+	font-size: 36px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h3{
+	color: #262626;
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a{
@@ -40,8 +49,8 @@ a{
   margin-bottom: 2rem;
 }
 
-.masthead-brand {
-  margin-bottom: 5rem;
+.home {
+  margin-top: 6.5rem;
 }
 
 .nav-masthead .nav-link {
@@ -68,6 +77,7 @@ a{
 
 @media (min-width: 2em) {
   .masthead-brand {
+		text-align:center;
     float: left;
   }
   .nav-masthead {
@@ -96,4 +106,30 @@ a{
 /* Padding for spacing */
 .inner {
   padding: 2rem;
+}
+
+/* Footer */
+
+.mastfoot {
+	 position: fixed;
+	 bottom: 0;
+ }
+
+ .mastfoot {
+	 width: 100%; /* Must be percentage or pixels for horizontal alignment */
+ }
+
+ .site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+	text-align:center;
 }
