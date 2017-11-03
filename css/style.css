@@ -219,7 +219,7 @@ Styles for card
 
 @media (max-width: 767px) {
     .fullscreen-bg {
-        background: url('../images/home.jpg') center center / cover no-repeat;
+        background: url('../images/home.png') center center / cover no-repeat;
     }
 
     .fullscreen-bg__video {
