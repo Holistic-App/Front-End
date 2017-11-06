@@ -264,7 +264,7 @@ p{
 	-o-transition: 0.05s all ease-in;
 }
 
-.card-header:active{
+.card-header:active/:hover{
 	background: #EDF8FF;
 }
 
