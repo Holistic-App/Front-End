@@ -31,12 +31,12 @@
   <!-- Body -->
   <div class="row justify-content-center">
   <div class="col-12 col-md-10">
-    <h2>Learn Salsa Dancing</h2>
+    <h2 id="goal_name"></h2>
     <h3> Break down your goal into actionable steps:</h3>
 
     <div class="card">
   <div class="card-header" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
-    Book a Salsa Dancing Class <span class="badge badge-primary">Popular</span>
+      <span id="step_1"></span> <span class="badge badge-primary">Popular</span>
   </div>
   <div class="collapse" id="card1">
     <div class="card card-body">
@@ -50,7 +50,7 @@
 
 <div class="card">
 <div class="card-header" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card1">
-Book a Salsa Dancing Class <span class="badge badge-primary">Popular</span>
+    <span id="step_2"></span> <span class="badge badge-primary">Popular</span>
 </div>
 <div class="collapse" id="card2">
 <div class="card card-body">
@@ -64,7 +64,7 @@ Book a Salsa Dancing Class <span class="badge badge-primary">Popular</span>
 
 
 <div class="card">
-<div class="card-header" data-toggle="collapse" href="#card3" aria-expanded="false" aria-controls="card1">
+<div class="card-header" data-toggle="collapse" href="#card3" aria-expanded="false" aria-controls="card1" id="step_3">
 Book a Salsa Dancing Class <span class="badge badge-primary">Popular</span>
 </div>
 <div class="collapse" id="card3">
@@ -90,9 +90,30 @@ Book a Salsa Dancing Class <span class="badge badge-primary">Popular</span>
     </div>
   </div>
 
+        
+      
+    <!-- database -->    
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD0S8-fLrEls5JgrqQRq_x4Te2Ynp7DS_g",
+        authDomain: "holistic-b1275.firebaseapp.com",
+        databaseURL: "https://holistic-b1275.firebaseio.com",
+        projectId: "holistic-b1275",
+        storageBucket: "holistic-b1275.appspot.com",
+        messagingSenderId: "214039989205"
+      };
+      firebase.initializeApp(config);
+    </script>
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <!-- Script to retrieve data from database -->
+    <script src="plan.js"></script>    
+      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </body>
