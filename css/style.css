@@ -253,12 +253,12 @@ p{
 .card-header {
 	border: 1px solid #e1e2e3;
   border-radius: 5px;
+	cursor: pointer;
 	background: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);;
 }
 
 .card-header:hover {
-	cursor: pointer;
 	-webkit-transition: 0.05s all ease-in;
 	-moz-transition: 0.05s all ease-in;
 	-o-transition: 0.05s all ease-in;
