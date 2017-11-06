@@ -75,14 +75,16 @@ p{
 	color:#fff;
 }
 
-.hometitle a {
+.btn-link{
 	color: #fff;
   font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
 }
 
-.hometitle a:hover {
+.btn-link:hover {
 	 opacity: .6;
+	 color: #fff;
+	font-weight: bold;
 	 text-decoration: none;
 }
 
@@ -229,6 +231,11 @@ p{
 		}
 }
 
+/* button */
+.btn-sm {
+	padding: .0rem .5rem;
+}
+
 /* card */
 
 .card {
@@ -251,11 +258,14 @@ p{
 }
 
 .card-header:hover {
-	background: #EDF8FF;
 	cursor: pointer;
-	-webkit-transition: 0.1s all ease-in;
-	-moz-transition: 0.1s all ease-in;
-	-o-transition: 0.1s all ease-in;
+	-webkit-transition: 0.05s all ease-in;
+	-moz-transition: 0.05s all ease-in;
+	-o-transition: 0.05s all ease-in;
+}
+
+.card-header:active{
+	background: #EDF8FF;
 }
 
 .card .card-body {
