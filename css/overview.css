@@ -1,0 +1,18 @@
+/*
+Styles for card
+*/
+
+.card {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 5px solid black;
+  border-radius: .50rem;
+  padding:30px;
+}
