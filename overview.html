@@ -33,13 +33,12 @@
             <div class = "container">
                 <div class="card">
                   <div class="card-block">
-                    <h2 class="card-title">Your Goals Overview</h2>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h2 class="card-title" id ="goal_name"></h2>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li class="list-group-item" id = "step_1"></li>
+                    <li class="list-group-item" id = "step_2"></li>
+                    <li class="list-group-item" id = "step_3"></li>
                   </ul>
                   <div class="card-block">
                     <a href="index.html" class="card-link">New Goal</a>
@@ -57,10 +56,27 @@
     </div>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD0S8-fLrEls5JgrqQRq_x4Te2Ynp7DS_g",
+      authDomain: "holistic-b1275.firebaseapp.com",
+      databaseURL: "https://holistic-b1275.firebaseio.com",
+      projectId: "holistic-b1275",
+      storageBucket: "holistic-b1275.appspot.com",
+      messagingSenderId: "214039989205"
+    };
+    firebase.initializeApp(config);
+  </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- JS script -->
+    <script src ="overview.js"></script>
+
   </body>
 </html>
