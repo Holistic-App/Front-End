@@ -14,6 +14,7 @@
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
   <body>
@@ -34,16 +35,20 @@
     <h2 id="goal_name"></h2>
     <h3> Break down your goal into actionable steps:</h3>
 
+<!-- Card for Step #1 -->
+
 <!-- Add step button -->
 <a role="button" id="addStepButton" class="btn btn-outline-primary">Add Step</a>  
       
 <!-- div for only cards -->      
 <div id="card_container">
-    
-<!-- Card for Step #1 -->      
+
     <div class="card" >
-  <div class="card-header" data-toggle="collapse" href="#card1" aria-expanded="true" aria-controls="card1">
-      <button type="button" class="btn btn-outline-danger btn-sm">F</button><span id="step_1"></span> <span class="badge badge-pill badge-success">Popular</span>
+  <div class="card-header" data-toggle="collapse" href="#card1" aria-expanded="true" aria-controls="card-header">
+      <div class="signifier">
+        <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
+      </div>
+      <span id="step_1"></span> <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
   </div>
   <div class="collapse show" id="card1">
     <div class="card-body">
@@ -56,8 +61,11 @@
 
 <!-- Card for Step #2 -->
 <div class="card">
-<div class="card-header" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card1">
-    <button type="button" class="btn btn-outline-danger btn-sm">X</button><span id="step_2"></span> <span class="badge badge-pill badge-success">Popular</span>
+<div class="card-header" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
+  <div class="signifier">
+    <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
+  </div>
+  <span id="step_2"></span> <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
 </div>
 <div class="collapse" id="card2">
 <div class="card-body">
@@ -72,8 +80,11 @@
 
 <!-- Card for Step #3 -->
 <div class="card">
-<div class="card-header" data-toggle="collapse" href="#card3" aria-expanded="false" aria-controls="card1" id="step_3">
-Book a Salsa Dancing Class
+<div class="card-header" data-toggle="collapse" href="#card3" aria-expanded="false" aria-controls="card3">
+  <div class="signifier">
+    <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
+  </div>
+  Book a Salsa Dancing Class <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
 </div>
 <div class="collapse" id="card3">
 <div class="card-body">

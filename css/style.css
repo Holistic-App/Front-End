@@ -271,3 +271,32 @@ p{
 .card .card-body {
 	border: 1px solid rgba(0,0,0,.125);
 }
+
+.right {
+	float:right;
+}
+
+.rotate{
+    -moz-transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
+}
+
+.rotate.down{
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.card-header[aria-expanded=true] .fa-chevron-right {
+   display: none;
+}
+.card-header[aria-expanded=false] .fa-chevron-down {
+   display: none;
+}
+
+.signifier {
+	width:20px;
+	float:left;
+}
