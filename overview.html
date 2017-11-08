@@ -31,20 +31,41 @@
 
         <div class = "section">
             <div class = "container">
-                <div class="card">
-                  <div class="card-block">
-                    <h2 class="card-title" id ="goal_name"></h2>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id = "step_1"></li>
-                    <li class="list-group-item" id = "step_2"></li>
-                    <li class="list-group-item" id = "step_3"></li>
-                  </ul>
-                  <div class="card-block">
-                    <a href="index.html" class="card-link">New Goal</a>
-                    <a href="edit.html" class="card-link">Edit</a>
+
+                <div class="card" >
+                  <h2 id = "goal_name"></h2>
+
+                <div class="card-header" data-toggle="collapse" href="#card1" aria-expanded="true" aria-controls="card1">
+                  <h3 id = "step_1"></h3>
+                </div>
+                <div class="collapse show" id="card1">
+                  <div class="card-body">
+                 <a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a>
+                 <a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a>
                   </div>
                 </div>
+                <div class="card-header" data-toggle="collapse" href="#card2" aria-expanded="true" aria-controls="card1">
+                  <h3 id = "step_2"></h3>
+                </div>
+                <div class="collapse show" id="card2">
+                  <div class="card-body">
+                 <a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a>
+                 <a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a>
+                  </div>
+                </div>
+                <div class="card-header" data-toggle="collapse" href="#card3" aria-expanded="true" aria-controls="card1">
+                  <h3 id = "step_3"></h3>
+                </div>
+                <div class="collapse show" id="card3">
+                  <div class="card-body">
+                 <a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a>
+                 <a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-outline-Primary">  <a href="index.html">Create a new Goal</a></button>
+
             </div>
          </div>
 
