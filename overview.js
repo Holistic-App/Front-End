@@ -52,3 +52,8 @@ rootRef.once("value")
        $("#step_3").text(step_3_name);
 
       });
+
+
+      $('input[type="checkbox"]').click(function() {
+        $(this).child().attr('disabled', this.checked);
+    });
