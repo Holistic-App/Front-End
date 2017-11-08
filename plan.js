@@ -67,3 +67,22 @@ rootRef.once("value")
 
 
 
+// Function that will add a blank card when user clicks "Add Step" button
+$("#addStepButton").click(function () {   
+  var blankCard = $('<div class="card" id="new_card"><div class="card-header"> <input type="text" id="step_input"><input type="submit" onclick="store()" value="Add Step" id="submit_step"> </div></div>');
+  $("#card_container").append(blankCard);     
+});
+
+// JS function to get what user inputs to new step
+function store(){
+  var step = document.getElementById("step_input").value;
+  // Set step name to local storage
+  localStorage.setItem("step name", step);
+  // Set new card 
+  $('#new_card').html('<div class="card"><div class="card-header">'+step+'</div></div>');
+}
+
+
+
+
+
