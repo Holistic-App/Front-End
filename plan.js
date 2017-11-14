@@ -65,21 +65,34 @@ rootRef.once("value")
 
 
 
-
-
+// use counter to create unique IDs for each new step that is added to web page and DB
+var step_counter = 0;
 // Function that will add a blank card when user clicks "Add Step" button
 $("#addStepButton").click(function () {   
-  var blankCard = $('<div class="card" id="new_card"><div class="card-header"> <input type="text" id="step_input"><input type="submit" onclick="store()" value="Add Step" id="submit_step"> </div></div>');
-  $("#card_container").append(blankCard);     
+  var blankCard = $('<div class="card" id="new_card'+step_counter+'"><div class="card-header"> <input type="text" id="step_input'+step_counter+'"><input type="submit" onclick="store()" value="Add Step" id="submit_step"> </div></div>');
+  $("#card_container").append(blankCard);  
+  
 });
 
 // JS function to get what user inputs to new step
 function store(){
-  var step = document.getElementById("step_input").value;
+  var step = document.getElementById("step_input"+step_counter).value;
+  // If user inputs empty string then alert
+  if (step == ''){
+      alert("Please enter a valid step name!");
+      return false;     
+  }
+      
   // Set step name to local storage
-  localStorage.setItem("step name", step);
+  localStorage.setItem("step name"+step_counter, step);
   // Set new card 
-  $('#new_card').html('<div class="card"><div class="card-header">'+step+'</div></div>');
+  $('#new_card'+step_counter).html('<div class="card"><div class="card-header">'+step+'</div></div>');
+  // Add new step to database
+  rootRef.child("step"+(step_counter+4)).child('0').set(step);
+  
+  //alert("New step was added to DATABASE");
+  // increase step counter for unique ids
+  step_counter+=1;
 }
 
 
