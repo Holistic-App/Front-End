@@ -54,6 +54,18 @@ rootRef.once("value")
       });
 
 
-      $('input[type="checkbox"]').click(function() {
-        $(this).child().attr('disabled', this.checked);
+
+    $(".collapse").click(function(){
+        $(this).fadeTo(400,.5);
     });
+
+    $('input').on('click', function(){
+        var val = 0;
+        $('input:checked').each(function(){
+             if ( $(this).attr('value') > val )
+             {
+                 val =  $(this).attr('value');
+             }
+        });
+        $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);    
+      });

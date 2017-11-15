@@ -256,6 +256,7 @@ p{
 	cursor: pointer;
 	background: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);;
+	margin-bottom: 10px;
 }
 
 .card-header:hover {
@@ -299,4 +300,8 @@ p{
 .signifier {
 	width:20px;
 	float:left;
+}
+
+.progress{
+	margin-bottom: 20px;
 }
