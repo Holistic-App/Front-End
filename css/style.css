@@ -302,7 +302,17 @@ p{
 	float:left;
 }
 
+<<<<<<< HEAD
 .progress{
   margin-bottom: 20px;
   margin-right: 5px;
+=======
+.stepclick {
+	cursor: pointer;
+	color: #fff!important;
+}
+
+.clickable {
+	cursor: pointer;
+>>>>>>> origin/Alvin_dev
 }
