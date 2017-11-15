@@ -303,5 +303,6 @@ p{
 }
 
 .progress{
-	margin-bottom: 20px;
+  margin-bottom: 20px;
+  margin-right: 5px;
 }

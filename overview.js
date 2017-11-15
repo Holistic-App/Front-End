@@ -53,19 +53,59 @@ rootRef.once("value")
 
       });
 
+    $("#check1").click(function(){
+        var element = document.getElementById("step_1");
+        if(element.style.getPropertyValue("text-decoration") == "line-through"){
+            element.style.setProperty("text-decoration", "none");            
+        }
+        else{
+            element.style.setProperty("text-decoration", "line-through");            
+        }    });
+    
+    $("#check2").click(function(){
 
-
-    $(".collapse").click(function(){
-        $(this).fadeTo(400,.5);
+        var element = document.getElementById("step_2");
+         if(element.style.getPropertyValue("text-decoration") == "line-through"){
+            element.style.setProperty("text-decoration", "none");            
+        }
+        else{
+            element.style.setProperty("text-decoration", "line-through");            
+        }
     });
+    
+    $("#check3").click(function(){
+        var element = document.getElementById("step_3");
+        if(element.style.getPropertyValue("text-decoration") == "line-through"){
+            element.style.setProperty("text-decoration", "none");            
+        }
+        else{
+            element.style.setProperty("text-decoration", "line-through");            
+        }   
+     });
+    
 
-    $('input').on('click', function(){
-        var val = 0;
+    //Manipulates the value of progress bar 
+    //based on the maximum values of the checkbox
+    $('input').click( function(){
+        var val = 0 
         $('input:checked').each(function(){
-             if ( $(this).attr('value') > val )
-             {
-                 val =  $(this).attr('value');
-             }
-        });
-        $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);    
+            if ( $(this).attr('value') > val )
+            {
+                val =  $(this).attr('value');
+            }       
+        }); 
+        $('.progress-bar').css('width', (val)+'%').attr('aria-valuenow', val);    
       });
+
+
+
+      
+      /*
+      var val = 0;
+      $('input:checked').each(function(){
+          if ( $(this).attr('value') > val )
+          {
+              val =  $(this).attr('value');
+          }       
+      });   
+      */
