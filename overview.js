@@ -27,22 +27,22 @@ firebase.database().ref(key).on('value', function(snapshot) {
         if(count == 0){
             document.getElementById("goal_name").innerHTML=childSnapshot.val();
             count+=1;
-        }
-        else if (count < 4){
+        }else if (count < 4){
             // Steps with links
+            var step = childSnapshot.val();
             $("#step_"+count).text(step[0]); 
             count+=1;    
-        }
-        else{
-            count+=1;
-            // increment count 
-            var newCard = $('<div class="card-header" ><div class="form-check" style="float:left;"><label class="form-check-label"><input name="progress" class="progress" type="checkbox" value="25"></label></div><h3>'+step[0]+'</h3></div><div class="collapse" id="card1">  <div class="card-body"><a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a><a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a></div></div>');
-            var step = childSnapshot.val();
+        }else{
             // Steps the user created  
+            var step = childSnapshot.val();
+            var newCard = $('<div class="card-header" ><div class="form-check" style="float:left;"><label class="form-check-label"><input name="progress" class="progress" type="checkbox" value="25"></label></div><h3>'+step[0]+'</h3></div><div class="collapse" id="card1">  <div class="card-body"><a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a><a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a></div></div>');
             $("#cardContainer").append(newCard); 
-        }
-      });
-    });     
+            // increment count 
+            count+=1;
+        }                        
+    });
+    
+});
           
 $("#check1").click(function(){
     var element = document.getElementById("step_1");
@@ -75,7 +75,7 @@ $("#check3").click(function(){
     else{
         element.style.setProperty("text-decoration", "line-through");            
     }   
- });
+});
 
 //Manipulates the value of progress bar 
 //based on the maximum values of the checkbox
