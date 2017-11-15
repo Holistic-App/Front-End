@@ -95,6 +95,11 @@ function store(){
   step_counter+=1;
 }
 
+// Function to remove steps
+//$("removeStep").click(function(){
+  //   $("card_2").remove();
+//})
+
 
 
 

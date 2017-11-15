@@ -45,11 +45,11 @@ rootRef.once("value")
 
 
        // Setting the titles of steps
-       document.getElementById("goal_name").innerHTML=goal;
+       //document.getElementById("goal_name").innerHTML=goal;
        //$("#goal_name").text(goal);
-       $("#step_1").text(step_1_name);
-       $("#step_2").text(step_2_name);
-       $("#step_3").text(step_3_name);
+       //$("#step_1").text(step_1_name);
+       //$("#step_2").text(step_2_name);
+       //$("#step_3").text(step_3_name);
 
       });
 
@@ -57,3 +57,33 @@ rootRef.once("value")
       $('input[type="checkbox"]').click(function() {
         $(this).child().attr('disabled', this.checked);
     });
+
+// Function to get data via for each loop
+firebase.database().ref(key).on('value', function(snapshot) {
+    
+    var count = 0;
+    //console.log(snapshot.val());
+    snapshot.forEach(function(childSnapshot) {
+        // Get goal name
+        if(count == 0){
+            document.getElementById("goal_name").innerHTML=childSnapshot.val();
+            count+=1;
+        }else if (count < 4){
+            // Steps with links
+            var step = childSnapshot.val();
+            $("#step_"+count).text(step[0]); 
+            count+=1;    
+        }else{
+            alert("Adding steps that user inputted");
+            // Steps the user created  
+            var step = childSnapshot.val();
+            alert(step[0]);
+            var newCard = $('<div class="card-header" ><div class="form-check" style="float:left;"><label class="form-check-label"><input name="progress" class="progress" type="checkbox" value="25"></label></div><h3>'+step[0]+'</h3></div><div class="collapse" id="card1">  <div class="card-body"><a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a><a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a></div></div>');
+            $("#cardContainer").append(newCard); 
+            //$("#step_"+count).text(step[0]); 
+            count+=1;
+        }
+        console.log(childSnapshot.val());                 
+    });
+    
+});

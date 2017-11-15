@@ -24,7 +24,7 @@
   <!-- Header -->
       <header class="masthead clearfix">
                 <div class="inner">
-                  <h3 class="masthead-brand">Holistic</h3>
+                    <a href="index.html"><h3 class="masthead-brand">Holistic</h3></a>
 
                 </div>
               </header>
@@ -38,9 +38,7 @@
 <!-- Card for Step #1 -->
 
 <!-- Add step button -->
-</br>
-<a role="button" id="addStepButton" class="btn btn-outline-primary">+ Add Step</a>
-</br>
+
 <!-- div for only cards -->
 <div id="card_container">
 
@@ -61,12 +59,12 @@
 </div>
 
 <!-- Card for Step #2 -->
-<div class="card">
+<div class="card" id="card_2">
 <div class="card-header" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
   <div class="signifier">
     <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
   </div>
-  <span id="step_2"></span> <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
+  <span id="step_2"></span> <span class="badge badge-pill badge-primary">Suggested</span><button type="button" id="removeStep" class="btn btn-outline-danger btn-sm right">X</button>
 </div>
 <div class="collapse" id="card2">
 <div class="card-body">
@@ -85,7 +83,7 @@
   <div class="signifier">
     <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
   </div>
-  Book a Salsa Dancing Class <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
+    <span id="step_3"></span><span class="badge badge-pill badge-primary">Suggested</span><button type="button" id="removeStep" class="btn btn-outline-danger btn-sm right">X</button>
 </div>
 <div class="collapse" id="card3">
 <div class="card-body">
@@ -97,6 +95,8 @@
 </div>
 
 </div>
+<a role="button" id="addStepButton" class="btn btn-success">+ Add Step</a>
+</br>
 <!-- Create Goal Button -->
 <a href="overview.html" role="button" class="btn btn-primary">Create Goal!</a>
 
