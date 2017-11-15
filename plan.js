@@ -69,7 +69,7 @@ rootRef.once("value")
 var step_counter = 0;
 // Function that will add a blank card when user clicks "Add Step" button
 $("#addStepButton").click(function () {
-  var blankCard = $('<div class="card" id="new_card'+step_counter+'"><div class="card-header"><form><div class="form-row"><div class="col"><input type="text" class="form-control" placeholder="Write a task name" id="step_input'+step_counter+'"></div><button type="submit" onclick="store()" value="Add Step" id="submit_step" class="btn btn-outline-primary">Add Task</button></div></div></form>');
+  var blankCard = $('<div class="card" id="new_card'+step_counter+'"><div class="card-header"><form><div class="form-row"><div class="col"><input type="text" class="form-control" placeholder="Write a task name" id="step_input'+step_counter+'"></div><button type="submit" onclick="store()" value="Add Step" id="submit_step" class="btn btn-outline-primary clickable">Add Task</button></div></div></form>');
   $("#card_container").append(blankCard);
 
 });

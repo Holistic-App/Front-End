@@ -305,3 +305,7 @@ p{
 	cursor: pointer;
 	color: #fff!important;
 }
+
+.clickable {
+	cursor: pointer;
+}
