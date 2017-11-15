@@ -10,16 +10,13 @@ var key = "";
 // Checking the users input
 if (goal_input == "travel to the bahamas"){
     key = "-KyFNErpdDuwyq1yPK2U"
-} else if(goal_input == "plan anniversary dinner"){
+    } 
+else if(goal_input == "plan anniversary dinner"){
     key = "-KyFOs2E1-WDUDl8p2Gx"
-} else{
+    } 
+else{
     key = "-KyFPwHlzbtIpro-CblX"
 }
-
-
-$('input[type="checkbox"]').click(function() {
-    $(this).child().attr('disabled', this.checked);
-});
 
 // Function to get data via for each loop
 firebase.database().ref(key).on('value', function(snapshot) {    
@@ -43,50 +40,54 @@ firebase.database().ref(key).on('value', function(snapshot) {
             var step = childSnapshot.val();
             // Steps the user created  
             $("#cardContainer").append(newCard); 
+        }
       });
-         
+    });     
           
-    $("#check1").click(function(){
-        var element = document.getElementById("step_1");
-        if(element.style.getPropertyValue("text-decoration") == "line-through"){
-            element.style.setProperty("text-decoration", "none");
-          }
-        else{
-            element.style.setProperty("text-decoration", "line-through");            
-          }    
-        });
-        
-    $("#check2").click(function(){
-        var element = document.getElementById("step_2");
-         if(element.style.getPropertyValue("text-decoration") == "line-through"){
-            element.style.setProperty("text-decoration", "none");            
+$("#check1").click(function(){
+    var element = document.getElementById("step_1");
+
+    if(element.style.getPropertyValue("text-decoration") == "line-through"){
+        element.style.setProperty("text-decoration", "none");
         }
-        else{
-            element.style.setProperty("text-decoration", "line-through");            
-        }
+    else{
+        element.style.setProperty("text-decoration", "line-through");            
+        }    
     });
-    
-    $("#check3").click(function(){
-        var element = document.getElementById("step_3");
-        if(element.style.getPropertyValue("text-decoration") == "line-through"){
-            element.style.setProperty("text-decoration", "none");            
-        }
-        else{
-            element.style.setProperty("text-decoration", "line-through");            
-        }   
-     });
-    
+        
+$("#check2").click(function(){
+    var element = document.getElementById("step_2");
 
-    //Manipulates the value of progress bar 
-    //based on the maximum values of the checkbox
-    $('input').click( function(){
-        var val = 0 
-        $('input:checked').each(function(){
-            if ( $(this).attr('value') > val )
-            {
-                val =  $(this).attr('value');
-            }       
-        }); 
-        $('.progress-bar').css('width', (val)+'%').attr('aria-valuenow', val);    
-      });
+    if(element.style.getPropertyValue("text-decoration") == "line-through"){
+        element.style.setProperty("text-decoration", "none");            
+    }
+    else {
+        element.style.setProperty("text-decoration", "line-through");            
+    }
+});
+    
+$("#check3").click(function(){
+    var element = document.getElementById("step_3");
 
+    if(element.style.getPropertyValue("text-decoration") == "line-through"){
+        element.style.setProperty("text-decoration", "none");            
+    }
+    else{
+        element.style.setProperty("text-decoration", "line-through");            
+    }   
+ });
+
+//Manipulates the value of progress bar 
+//based on the maximum values of the checkbox
+$('input').click( function(){
+    var val = 0 
+    $('input:checked').each(function(){
+        if ( $(this).attr('value') > val )
+        {
+            val =  $(this).attr('value');
+        }       
+    }); 
+
+    $('.progress-bar').css('width', (val)+'%').attr('aria-valuenow', val);    
+    
+});
