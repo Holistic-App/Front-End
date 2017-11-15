@@ -300,3 +300,12 @@ p{
 	width:20px;
 	float:left;
 }
+
+.stepclick {
+	cursor: pointer;
+	color: #fff!important;
+}
+
+.clickable {
+	cursor: pointer;
+}
