@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+    <title>Plan your Goal!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +24,7 @@
   <!-- Header -->
       <header class="masthead clearfix">
                 <div class="inner">
-                  <h3 class="masthead-brand">Holistic</h3>
+                  <h3 class="masthead-brand"><a href="index.html">Holistic</a></h3>
 
                 </div>
               </header>
@@ -33,14 +33,10 @@
   <div class="row justify-content-center">
   <div class="col-12 col-md-10">
     <h2 id="goal_name"></h2>
-    <h3> Break down your goal into actionable steps:</h3>
+    <h3> Break down your goal into actionable tasks:</h3>
 
 <!-- Card for Step #1 -->
 
-<!-- Add step button -->
-</br>
-<a role="button" id="addStepButton" class="btn btn-outline-primary">+ Add Step</a>
-</br>
 <!-- div for only cards -->
 <div id="card_container">
 
@@ -49,13 +45,13 @@
       <div class="signifier">
         <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
       </div>
-      <span id="step_1"></span> <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
+      <span id="step_1"></span> <span class="badge badge-pill badge-secondary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
   </div>
   <div class="collapse show" id="card1">
     <div class="card-body">
-   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-   <a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a>
-   <a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a>
+   <p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
+   <a id="s1_link_1" href="" target="_blank" role="button" class="btn btn-outline-dark">San Diego Salsa Lessons</a>
+   <a id="s1_link_2" href="" target="_blank" role="button" class="btn btn-outline-dark">Groupons.com</a>
     </div>
   </div>
 </div>
@@ -66,13 +62,13 @@
   <div class="signifier">
     <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
   </div>
-  <span id="step_2"></span> <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
+  <span id="step_2"></span> <span class="badge badge-pill badge-secondary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
 </div>
 <div class="collapse" id="card2">
 <div class="card-body">
-<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-<a id="s2_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a>
-<a id="s2_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a>
+<p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
+<a id="s2_link_1" href="" target="_blank" role="button" class="btn btn-outline-dark">Apple Music</a>
+<a id="s2_link_2" href="" target="_blank" role="button" class="btn btn-outline-dark">Spotify</a>
 </div>
 </div>
 </div>
@@ -85,20 +81,29 @@
   <div class="signifier">
     <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
   </div>
-  Book a Salsa Dancing Class <span class="badge badge-pill badge-primary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
+  <span id="step_3"></span> <span class="badge badge-pill badge-secondary">Suggested</span><button type="button" class="btn btn-outline-danger btn-sm right">X</button>
 </div>
 <div class="collapse" id="card3">
 <div class="card-body">
-<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-<a id="s3_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a>
-<a id="s3_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a>
+<p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
+<a id="s3_link_1" href="" role="button" target="_blank" class="btn btn-outline-dark">Salsa Shoes On Amazon</a>
+<a id="s3_link_2" href="" role="button" target="_blank" class="btn btn-outline-dark">DanceWear Solution</a>
 </div>
 </div>
 </div>
 
+
+
+
+
+
 </div>
+
+<!-- Add step button -->
+<a role="button" id="addStepButton" class="btn btn-primary stepclick">+ Add Step</a>
+
 <!-- Create Goal Button -->
-<a href="overview.html" role="button" class="btn btn-primary">Create Goal!</a>
+<a href="overview.html" role="button" class="btn btn-outline-primary" style="float:right;">Create Goal!</a>
 
 
 
