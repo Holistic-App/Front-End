@@ -35,7 +35,7 @@ firebase.database().ref(key).on('value', function(snapshot) {
         }else{
             // Steps the user created
             var step = childSnapshot.val();
-            var newCard = $('<div class="card-header" ><div class="form-check" style="float:left;"><label class="form-check-label"><input name="progress" class="progress" type="checkbox"></label></div><h3>'+step[0]+'</h3></div><div class="collapse" id="card1">  <div class="card-body"><a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a><a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a></div></div>');
+            var newCard = $('<div class="card" ><div class="card-header" ><div class="form-check" style="float:left;"><label class="form-check-label"><input name="progress" class="progress" type="checkbox" onchange="countChecked()"></label></div><span>'+step[0]+'</span></div><div class="collapse" id="card1">  <div class="card-body"><a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Groupon.com</a><a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Yelp Reviews</a></div></div></div>');
             $("#cardContainer").append(newCard);
             // increment count
             count+=1;
@@ -92,7 +92,6 @@ $('input').click( function(){
 
 });
 
-$( document ).ready(function() {
   // get box count
   var checkcount = 0;
   var checked = 0;
@@ -109,6 +108,7 @@ $( document ).ready(function() {
   function countChecked() {
      checked = $("input:checked").length;
 
+     console.log(checked);
      var percentage = parseInt(((checked / checkcount) * 100),10);
 
      $('.progress-bar').css('width', percentage+'%').attr('aria-valuenow', percentage);
@@ -117,5 +117,3 @@ $( document ).ready(function() {
 
   countChecked();
   $(":checkbox").click(countChecked);
-
-  });
