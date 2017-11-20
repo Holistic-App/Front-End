@@ -1,4 +1,4 @@
-body {
+body cardContainer {
 	background: #f8f9f9;
 }
 
@@ -306,6 +306,7 @@ p{
 .progress{
   margin-bottom: 20px;
   margin-right: 5px;
+	border-radius: 1rem;
 }
 .stepclick {
 	cursor: pointer;
@@ -314,4 +315,14 @@ p{
 
 .clickable {
 	cursor: pointer;
+}
+
+.progress-bar {
+	-moz-transition: all .5s linear;
+	-webkit-transition: all .5s linear;
+	transition: all .5s linear;
+}
+
+.form-check-label {
+	padding:5px;
 }

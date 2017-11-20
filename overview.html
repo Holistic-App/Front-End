@@ -17,50 +17,50 @@
   </head>
   <body>
 
+  <div class="container">
     <header class="masthead clearfix">
               <div class="inner">
                   <a href="index.html"><h3 class="masthead-brand">Holistic</h3></a>
                 <nav class="nav nav-masthead">
-                    <button type="button" class="btn btn-outline-dark">  <a href="#">Sign Out</a></button>
+                    <a href="index.html" role="button" class="btn btn-outline-secondary">Sign Out</a>
                 </nav>
               </div>
             </header>
 
 
-        <div class = "section" >
-            <div class = "container">
+            <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+              <h2 id="goal_name"></h2>
 
                 <div class="card" >
+                  <div id="cardContainer">
 
-                <div id ="cardContainer">
-
-                  <h2 id = "goal_name"></h2>
-
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="101" id = "pbar"></div>
+                  <div class="progress" style="height: 25px;">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "pbar"></div>
                   </div>
-                
 
-                <div class="card-header" >
+
+                <div class="card-header">
                   <div class="form-check" style="float:left;" id = "check1">
                   <label class="form-check-label">
-                    <input name="progress" class="progress" type="checkbox" value="33">
+                    <input name="progress" class="progress" type="checkbox">
                   </label>
                   </div>
-                  <h3 id = "step_1" data-toggle="collapse" href="#card1" aria-expanded="true" aria-controls="card1"></h3>
+                    <span id="step_1" data-toggle="collapse" href="#card1" aria-expanded="true" aria-controls="card1"></span>
                 </div>
 
-                <div class="collapse" id="card1">
+                <div class="collapse show" id="card1">
                   <div class="card-body">
-                 <a id="s1_link_1" href="" role="button" class="btn btn-outline-dark">Link 1</a>
-                 <a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Link 2</a>
+                 <p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
+                 <a id="s1_link_1" href="" target="_blank" role="button" class="btn btn-outline-dark">San Diego Salsa Lessons</a>
+                 <a id="s1_link_2" href="" target="_blank" role="button" class="btn btn-outline-dark">Groupons.com</a>
                   </div>
                 </div>
 
                 <div class="card-header">
                   <div class="form-check" style="float:left;" id="check2">
                   <label class="form-check-label">
-                    <input name="progress" class="progress" type="checkbox" value="66">
+                    <input name="progress" class="progress" type="checkbox">
                   </label>
                   </div>
                   <h3 id = "step_2" data-toggle="collapse" href="#card2" aria-expanded="true" aria-controls="card2"></h3>
@@ -75,7 +75,7 @@
                 <div class="card-header" >
                   <div class="form-check" style="float:left;" id = "check3">
                   <label class="form-check-label" >
-                    <input name="progress" class="progress" type="checkbox" value="99.5">
+                    <input name="progress" class="progress" type="checkbox">
                   </label>
                   </div>
                   <h3 id = "step_3" data-toggle="collapse" href="#card3" aria-expanded="true" aria-controls="card3"></h3>
@@ -86,10 +86,10 @@
                  <a id="s1_link_2" href="" role="button" class="btn btn-outline-dark">Link 2</a>
                   </div>
                 </div>
-               
+
               </div>
-              
-                    
+
+
                 <button type="button" class="btn btn-outline-Primary">  <a href="plan.html">Edit</a></button>
               </div>
 
@@ -97,6 +97,9 @@
 
             </div>
          </div>
+       </div>
+        </div>
+
 
         <!-- Skeleton -->
 
