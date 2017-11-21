@@ -376,4 +376,7 @@ strong {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+
+.modal-dialog {
+    margin-top: 250px;
 }
