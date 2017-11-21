@@ -29,10 +29,8 @@ h3{
 }
 
 h4 {
-	color: #fff;
+  color: #fff;
 }
-
-
 
 a{
 	font-weight: 200;
@@ -301,7 +299,6 @@ p{
 	float:left;
 }
 
-
 .progress{
   margin-bottom: 20px;
   margin-right: 5px;
@@ -313,4 +310,15 @@ p{
 
 .clickable {
 	cursor: pointer;
+}
+
+strong {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#addStepButton {
+}
+
+#addCard {
 }
