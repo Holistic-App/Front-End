@@ -112,8 +112,16 @@ $('input').click( function(){
      var percentage = parseInt(((checked / checkcount) * 100),10);
 
      $('.progress-bar').css('width', percentage+'%').attr('aria-valuenow', percentage);
-   }
+     var pbar = $('.progress-bar')
+     if( percentage == 100 ){
+         $('.modal').show();
+     }
+    }
 
+    $('.close').click(function(){
+        $('.modal').hide();
+      });
 
   countChecked();
   $(":checkbox").click(countChecked);
+

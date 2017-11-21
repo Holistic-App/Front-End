@@ -42,7 +42,7 @@
                   </div>
 
                   <div class="card" >
-                <div class="card-header" aria-expanded="true"  aria-controls="card-header">
+                <div class="card-header" aria-expanded="false"  aria-controls="card-header">
                   <div class="form-check" style="float:left;" id = "check1">
                   <label class="form-check-label">
                     <input name="progress" class="progress" type="checkbox">
@@ -50,7 +50,7 @@
                   </div>
                     <span id="step_1" data-toggle="collapse" href="#card1" aria-expanded="true" aria-controls="card1"></span><span class="badge badge-pill badge-secondary"> Suggested</span>
                 </div>
-                <div class="collapse show" id="card1">
+                <div class="collapse" id="card1">
                   <div class="card-body">
                  <p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
                  <a id="s1_link_1" href="" target="_blank" role="button" class="btn btn-outline-dark">San Diego Salsa Lessons</a>
@@ -99,7 +99,6 @@
               <!-- Card Container -->
               </div>
                <button type="button" class="btn btn-outline-Primary">  <a href="planB.html">Edit</a></button>
-              <button type="button" class="btn btn-outline-Primary">  <a href="index.html">Create a new Goal</a></button>
 
             </div>
          </div>
@@ -109,11 +108,25 @@
 
         <!-- Skeleton -->
 
-    <!-- Contaner and Wrapper -->
+    <!-- Container and Wrapper -->
 
       </div>
     </div>
   </div>
+
+
+  <div id="myModal" class="modal">
+      <!-- Modal content -->
+      
+      <div class="modal-content">
+        <span class = "close">x</span>          
+        <h1>Congrats!</h1>
+        <br>
+        <p>You achieved a new goal, <br> now on to the next one.</p>
+        <button type="button" class="btn btn-outline-Primary"><a href = "index.html">Create a new Goal</a></button>        
+      </div>
+    
+    </div>
 
   <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
   <script>

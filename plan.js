@@ -68,7 +68,7 @@ rootRef.once("value")
 // use counter to create unique IDs for each new step that is added to web page and DB
 var step_counter = 4;
 // Function that will add a blank card when user clicks "Add Step" button
-$("#addStepButton").click(function () {
+$("#addCard").click(function () {
   var blankCard = $('<div class="card" id="new_card'+step_counter+'"><div class="card-header"><form><div class="form-row"><div class="col"><input type="text" class="form-control" placeholder="Write a task name" id="step_input'+step_counter+'"></div><button type="submit" onclick="store()" value="Add Step" id="submit_step" class="btn btn-outline-primary clickable">Add Task</button></div></div></form>');
   $("#card_container").append(blankCard);
 
@@ -107,7 +107,7 @@ $(".btn-listener-2").click(function(){
 $(".btn-listener-3").click(function(){
     $("#card3").hide();
 });
-
+ 
 $(".btn-listener-"+step_counter).click(function(){
     console.log("this ran");
     $("#card"+step_counter).hide();
