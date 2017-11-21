@@ -21,7 +21,7 @@ if (goal_input == "travel to the bahamas"){
 // Function to get data via for each loop
 var count = 0;
 firebase.database().ref(key).once('value', function(snapshot) {    
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     snapshot.forEach(function(childSnapshot) {
         // Get goal name
         if(count == 0){
@@ -31,8 +31,8 @@ firebase.database().ref(key).once('value', function(snapshot) {
         }else{
             // Steps the user created  
             var step = childSnapshot.val();
-            console.log(step[0])
-            var newCard = $('<div class="card"><div class="card-header">'+step[0]+'</div></div>');
+            //console.log(step[0])
+            var newCard = $('<div class="card" id="newCard'+count+'"><div class="card-header" id="cardHeader'+count+'"><span id="taskName'+count+'">'+step[0]+'</span><button type="button" onclick="rename(this)" class="btn btn-outline-danger btn-sm right" data-toggle="modal" data-target="#exampleModal">Rename Task</button></div></div>');
             $("#card_container").append(newCard); 
             // increment count 
             count+=1;
@@ -40,6 +40,44 @@ firebase.database().ref(key).once('value', function(snapshot) {
     });
     
 });
+
+//<span></span>
+//<button onclick="rename(this)" id="renameStep'+count+'" type="button" class="btn btn-outline-danger btn-sm right">Rename Task</button>
+
+
+//<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Launch demo modal</button>
+
+// Function gets parent id of card that is being renamed
+function rename(elem){
+    // get parent
+    var card = elem.parentNode.id; 
+    var cardID = "#"+card; 
+    // get child element aka span
+    var textID = $(cardID).children().first().attr("id");      
+    // Set specific task id to local storage
+    localStorage.setItem("spanID", textID);
+}
+
+// Function will set new name of task is user clicks submit
+function setName(){
+    // get id of span that will be changed from LS       
+    var cardID = localStorage.getItem('spanID');
+    var IDtoChange = "#"+cardID;
+    console.log(IDtoChange);
+    var IDnum = IDtoChange.replace ( /[^\d.]/g, '' );
+    console.log(IDnum);
+    // set users input to task name
+    $(IDtoChange).text($("#newName").val());
+    
+    // Now make changes reflect the database :)
+    firebase.database().ref(key).child("step"+IDnum).child('0').set($("#newName").val())
+}
+
+
+//    console.log("DOC ready");
+//    $('#renameStep2').on('click', function(event) {
+//        console.log('You clicked the Bootstrap Card');
+//    });
 
 
 // Code below is for adding new steps 
@@ -60,9 +98,9 @@ function store(){
   }
 
   // Set step name to local storage
-  localStorage.setItem("step name"+count, step);
-  // Set new card
-  $('#new_card'+count).html('<div class="card"><div class="card-header">'+step+'</div></div>');
+  //localStorage.setItem("step name"+count, step);
+  // Set new card  
+  $('#new_card'+count).html('<div class="card" id="newCard'+count+'"><div class="card-header" id="cardHeader'+count+'"><span id="taskName'+count+'">'+step+'</span><button type="button" onclick="rename(this)" class="btn btn-outline-danger btn-sm right" data-toggle="modal" data-target="#exampleModal">Rename Task</button></div></div>');
   // Add new step to database
   firebase.database().ref(key).child("step"+count).child('0').set(step);
 
@@ -70,5 +108,13 @@ function store(){
   // increase step counter for unique ids
   count+=1;
 }
+
+
+
+// Function that will edit the text of the task name
+//$('.card').on('click', function(event) {
+//     console.log('You clicked the Bootstrap Card');
+//});
+
 
 

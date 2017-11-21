@@ -18,6 +18,8 @@
 
   </head>
   <body>
+      
+      
 
     <div class="container">
 
@@ -33,12 +35,34 @@
   <div class="row justify-content-center">
   <div class="col-12 col-md-10">
     <h2 id="goal_name"></h2>
-    <h3> Break down your goal into actionable tasks:</h3>
+    <h3> Add or edit any tasks to your goal:</h3>
 
 <!-- Card for Step #1 -->
 
 <!-- div for only cards -->
 <div id="card_container">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter new task name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <input type="text" id="newName">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" onclick="setName()" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Cards will dynamically created and put here  -->
 </div>
 
