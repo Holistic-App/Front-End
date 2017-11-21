@@ -1,4 +1,4 @@
-body {
+body cardContainer {
 	background: #f8f9f9;
 }
 
@@ -253,6 +253,7 @@ p{
   border-radius: 5px;
 	cursor: pointer;
 	background: #fff;
+	margin-bottom:0px;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);;
 }
 
@@ -302,6 +303,7 @@ p{
 .progress{
   margin-bottom: 20px;
   margin-right: 5px;
+	border-radius: 1rem;
 }
 .stepclick {
 	cursor: pointer;
@@ -317,8 +319,16 @@ strong {
   font-size: 20px;
 }
 
-#addStepButton {
+.progress-bar {
+	-moz-transition: all .5s linear;
+	-webkit-transition: all .5s linear;
+	transition: all .5s linear;
 }
 
-#addCard {
+.form-check-label {
+	padding:5px;
+}
+
+.form-check {
+	height:10px;
 }
