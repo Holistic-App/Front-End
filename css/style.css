@@ -309,3 +309,7 @@ p{
 .clickable {
 	cursor: pointer;
 }
+
+.modal-dialog {
+    margin-top: 250px;
+}

@@ -16,9 +16,9 @@ if (goal_input == "travel to the bahamas"){
     key = "-KyFPwHlzbtIpro-CblX"
 }
 
-// Get reference to root of specific goal
-//var rootRef = firebase.database().ref(key);
-// Function to get data via for each loop
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////  Code below is for pulling data and dynamically creating elements   ////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var count = 0;
 firebase.database().ref(key).once('value', function(snapshot) {    
     //console.log(snapshot.val());
@@ -41,13 +41,14 @@ firebase.database().ref(key).once('value', function(snapshot) {
     
 });
 
-//<span></span>
-//<button onclick="rename(this)" id="renameStep'+count+'" type="button" class="btn btn-outline-danger btn-sm right">Rename Task</button>
 
 
-//<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Launch demo modal</button>
 
-// Function gets parent id of card that is being renamed
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// Code below is renaming task ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function rename(elem){
     // get parent
     var card = elem.parentNode.id; 
@@ -74,14 +75,9 @@ function setName(){
 }
 
 
-//    console.log("DOC ready");
-//    $('#renameStep2').on('click', function(event) {
-//        console.log('You clicked the Bootstrap Card');
-//    });
-
-
-// Code below is for adding new steps 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// Code below is for adding new steps ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $("#addStepButton").click(function () {
   var blankCard = $('<div class="card" id="new_card'+count+'"><div class="card-header"><form><div class="form-row"><div class="col"><input type="text" class="form-control" placeholder="Write a task name" id="step_input'+count+'"></div><button type="submit" onclick="store()" value="Add Step" id="submit_step" class="btn btn-outline-primary clickable">Add Task</button></div></div></form>');
   $("#card_container").append(blankCard);
@@ -109,12 +105,6 @@ function store(){
   count+=1;
 }
 
-
-
-// Function that will edit the text of the task name
-//$('.card').on('click', function(event) {
-//     console.log('You clicked the Bootstrap Card');
-//});
 
 
 
