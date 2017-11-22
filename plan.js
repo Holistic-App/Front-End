@@ -86,17 +86,32 @@ function store(){
   // Set step name to local storage
   localStorage.setItem("step name"+step_counter, step);
   // Set new card
-  $('#new_card'+step_counter).html('<div class="card"><div class="card-header" id="card'+step_counter+'">'+step+'<button type="button" class="btn btn-outline-danger btn-sm right btn-listener-'+step_counter+'" onclick="hide()">X</button></div></div>');
+  $('#new_card'+step_counter).html('<div class="card" id="card'+step_counter+'"><div class="card-header">'+step+'<button id="delete_task" type="button" class="btn btn-outline-danger btn-sm right btn-listener-'+step_counter+'" onclick="hide(this)">X</button></div></div>');
   // Add new step to database
-  rootRef.child("step"+(step_counter+4)).child('0').set(step);
+  rootRef.child("step"+(step_counter)).child('0').set(step);
 
-  //alert("New step was added to DATABASE");
+  // alert("New step was added to DATABASE");
   // increase step counter for unique ids
   step_counter+=1;
 
 }
 
-$(".btn-listener-1").click(function(){
+
+// Removes element from html and database
+function hide(elem) {
+    // This will remove HTML element
+    console.log(elem.parentNode.parentNode.id);
+    var cardToDeleteID = "#"+(elem.parentNode.parentNode.id);
+    $(cardToDeleteID).remove();
+    
+    // This will remove specific step from database
+    var IdToDelete = cardToDeleteID.replace ( /[^\d.]/g, '' );
+    console.log(IdToDelete);
+    firebase.database().ref(key).child("step"+IdToDelete).remove();
+    console.log("Step was Removed!");
+}
+
+/*$(".btn-listener-1").click(function(){
     $("#card1").hide();
 });
 
@@ -111,4 +126,6 @@ $(".btn-listener-3").click(function(){
 $(".btn-listener-"+step_counter).click(function(){
     console.log("this ran");
     $("#card"+step_counter).hide();
-});
+});*/
+
+

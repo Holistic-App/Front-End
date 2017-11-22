@@ -32,7 +32,7 @@ firebase.database().ref(key).once('value', function(snapshot) {
             // Steps the user created  
             var step = childSnapshot.val();
             //console.log(step[0])
-            var newCard = $('<div class="card" id="newCard'+count+'"><div class="card-header" id="cardHeader'+count+'"><span id="taskName'+count+'">'+step[0]+'</span><button type="button" onclick="rename(this)" class="btn btn-outline-danger btn-sm right" data-toggle="modal" data-target="#exampleModal">Rename Task</button></div></div>');
+            var newCard = $('<div class="card" id="newCard'+count+'"><div class="card-header" id="cardHeader'+count+'"><span id="taskName'+count+'">'+step[0]+'</span><button type="button" onclick="edit(this)" class="btn btn-outline-danger btn-sm right" data-toggle="modal" data-target="#exampleModal">Edit Task</button></div></div>');
             $("#card_container").append(newCard); 
             // increment count 
             count+=1;
@@ -46,17 +46,22 @@ firebase.database().ref(key).once('value', function(snapshot) {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////// Code below is renaming task ////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// Code below is renaming and deleting tasks /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function rename(elem){
+// Function get id of card that was clicked and stored to local storage
+function edit(elem){
     // get parent
-    var card = elem.parentNode.id; 
-    var cardID = "#"+card; 
+    var card_header = elem.parentNode.id;
+    var card = elem.parentNode.parentNode.id;
+    console.log(card_header);
+    console.log(card);
+    var cardHeaderID = "#"+card_header; 
     // get child element aka span
-    var textID = $(cardID).children().first().attr("id");      
+    var textID = $(cardHeaderID).children().first().attr("id");      
     // Set specific task id to local storage
     localStorage.setItem("spanID", textID);
+    localStorage.setItem("cardID",card);
 }
 
 // Function will set new name of task is user clicks submit
@@ -74,7 +79,16 @@ function setName(){
     firebase.database().ref(key).child("step"+IDnum).child('0').set($("#newName").val())
 }
 
-
+// Function will delete the card and data on database
+function deleteTask(){
+    var cardID = localStorage.getItem('cardID');
+    var cardToDeleteID = "#"+(cardID);
+    $(cardToDeleteID).remove();
+    var IdToDelete = cardToDeleteID.replace ( /[^\d.]/g, '' );
+    console.log(IdToDelete);
+    firebase.database().ref(key).child("step"+IdToDelete).remove();
+    console.log("Step was Removed!");
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// Code below is for adding new steps ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,7 +110,7 @@ function store(){
   // Set step name to local storage
   //localStorage.setItem("step name"+count, step);
   // Set new card  
-  $('#new_card'+count).html('<div class="card" id="newCard'+count+'"><div class="card-header" id="cardHeader'+count+'"><span id="taskName'+count+'">'+step+'</span><button type="button" onclick="rename(this)" class="btn btn-outline-danger btn-sm right" data-toggle="modal" data-target="#exampleModal">Rename Task</button></div></div>');
+  $('#new_card'+count).html('<div class="card" id="newCard'+count+'"><div class="card-header" id="cardHeader'+count+'"><span id="taskName'+count+'">'+step+'</span><button type="button" onclick="edit(this)" class="btn btn-outline-danger btn-sm right" data-toggle="modal" data-target="#exampleModal">Edit Task</button></div></div>');
   // Add new step to database
   firebase.database().ref(key).child("step"+count).child('0').set(step);
 
