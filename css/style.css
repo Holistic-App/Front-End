@@ -341,7 +341,6 @@ strong {
 
 .modal {
   position: fixed; /* Stay in place */
-  
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -354,12 +353,9 @@ strong {
 
 /* Modal Content */
 .modal-content {
-  background-color: #ffffff;
   margin: auto;
   padding: 20px;
-  border: 3px solid black;
   border-radius: 20px;
-  width: 80%;
   text-align:center;
 }
 
@@ -376,7 +372,22 @@ strong {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
 
 .modal-dialog {
     margin-top: 250px;
+}
+
+.congrats {
+	background: url('../images/congrats.png') center / cover repeat;
+	border-radius: 10px;
+	padding:25px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+	-moz-transition: all 2s linear;
+	-webkit-transition: all 2s linear;
+	transition: all 2s linear;
+}
+
+.modalTitle{
+	color:#000!important;
 }
