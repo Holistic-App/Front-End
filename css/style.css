@@ -58,7 +58,7 @@ p{
 }
 
 .home {
-  margin-top: 8.5rem;
+  margin-top: 4.5rem;
 }
 
 .masthead-brand-home h3{
@@ -390,4 +390,17 @@ strong {
 
 .modalTitle{
 	color:#000!important;
+}
+
+.homepage {
+	margin-top: 50px;
+	background: none;
+	opacity:.9;
+	border: 1px solid #fff!important;
+	border-radius:5px;
+}
+
+.hometext {
+	color:#fff!important;
+	font-size: 18px;
 }
