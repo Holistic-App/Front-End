@@ -354,8 +354,8 @@ strong {
 /* Modal Content */
 .modal-content {
   margin: auto;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 10px;
   text-align:center;
 }
 
@@ -375,7 +375,7 @@ strong {
 }
 
 .modal-dialog {
-    margin-top: 250px;
+    margin-top: 50px;
 }
 
 .congrats {
