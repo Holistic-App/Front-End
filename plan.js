@@ -111,6 +111,20 @@ function hide(elem) {
     console.log("Step was Removed!");
 }
 
+
+$("#addcard").click(function(){
+    console.log("Add Step Button Clicked!");
+    tracker = ga.getAll()[0];
+    tracker.send('event', 'button', 'click');
+});
+
+
+$("#addStepButton").click(function(){
+    console.log("Add Card Button Clicked!");
+    tracker = ga.getAll()[0];
+    tracker.send('event', 'button', 'click');
+});
+
 /*$(".btn-listener-1").click(function(){
     $("#card1").hide();
 });
