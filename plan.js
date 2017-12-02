@@ -124,6 +124,11 @@ $("#addCard2").click(function(){
     tracker.send('event', 'button', 'click');
 });
 
+$("#addCard").click(function(){
+    console.log("Add Step Button Clicked!");
+    tracker = ga.getAll()[0];
+    tracker.send('event', 'button', 'click');
+});
 
 $("#addStepButton").click(function(){
     console.log("Add Card Button Clicked!");
