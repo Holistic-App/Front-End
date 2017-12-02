@@ -19,12 +19,15 @@ h1{
 h2{
 	color: #262626;
 	font-size: 36px;
+	text-align:center;
 	font-family: 'Open Sans', sans-serif;
 }
 
 h3{
 	color: #262626;
-	font-size: 24px;
+	text-align:center;
+	margin-bottom:40px;
+	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -251,7 +254,6 @@ p{
 .card-header {
 	border: 1px solid #e1e2e3;
   border-radius: 5px;
-	cursor: pointer;
 	background: #fff;
 	margin-bottom:0px;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);;
@@ -301,9 +303,11 @@ p{
 }
 
 .progress{
+	margin-top:-10px;
   margin-bottom: 20px;
   margin-right: 5px;
-	border-radius: 1rem;
+	background: #fff;
+	border: 1px solid #7C7C7C;
 }
 .stepclick {
 	cursor: pointer;
@@ -403,4 +407,10 @@ strong {
 .hometext {
 	color:#fff!important;
 	font-size: 18px;
+}
+
+....overviewContainer {
+    padding: 15px;
+    background: #fff;
+		border: 1px solid #C8C8C8;
 }

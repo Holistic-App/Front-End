@@ -40,7 +40,11 @@
 
             <div class="row justify-content-center">
             <div class="col-12 col-md-10">
-              <h2 id="goal_name"></h2>
+              <div class="overviewContainer">
+              <h2 id="goal_name" style="float: left;"></h2><a href="planEdit.html" role="button" style="float:right;" class="btn btn-outline-secondary">Edit</a>
+            </br>
+              </br>
+              </br>
 
 
                   <div id="cardContainer">
@@ -51,7 +55,7 @@
                   </div>
 
                   <div class="card" >
-                <div class="card-header" aria-expanded="false"  aria-controls="card-header">
+                <div class="card-header clickable" aria-expanded="false"  aria-controls="card-header">
                   <div class="form-check" style="float:left;" id = "check1">
                   <label class="form-check-label">
                     <input name="progress" class="progress" type="checkbox">
@@ -69,7 +73,7 @@
               </div>
 
               <div class="card" >
-                <div class="card-header" aria-expanded="false" aria-controls="card-header">
+                <div class="card-header clickable" aria-expanded="false" aria-controls="card-header">
                   <div class="form-check" style="float:left;" id="check2">
                   <label class="form-check-label">
                     <input name="progress" class="progress" type="checkbox">
@@ -86,7 +90,7 @@
               </div>
 
               <div class="card">
-                <div class="card-header" >
+                <div class="card-header clickable" >
                   <div class="form-check" style="float:left;" id = "check3">
                   <label class="form-check-label" >
                     <input name="progress" class="progress" type="checkbox">
@@ -107,7 +111,10 @@
 
               <!-- Card Container -->
               </div>
-               <a href="planEdit.html" role="button" class="btn btn-outline-secondary">Edit Goal</a>
+
+
+             </div>
+
 
             </div>
          </div>
