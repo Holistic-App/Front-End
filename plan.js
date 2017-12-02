@@ -118,7 +118,7 @@ function hide(elem) {
 }
 
 
-$("#addCard").click(function(){
+$("#addCard2").click(function(){
     console.log("Add Step Button Clicked!");
     tracker = ga.getAll()[0];
     tracker.send('event', 'button', 'click');
