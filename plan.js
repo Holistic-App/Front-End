@@ -74,6 +74,12 @@ $("#addCard").click(function () {
 
 });
 
+$("#addCard2").click(function () {
+  var blankCard = $('<div class="card" id="new_card'+step_counter+'"><div class="card-header"><form><div class="form-row"><div class="col"><input type="text" class="form-control" placeholder="Write a task name" id="step_input'+step_counter+'"></div><button type="submit" onclick="store()" value="Add Step" id="submit_step" class="btn btn-outline-primary clickable">Add Task</button></div></div></form>');
+  $("#card_container").append(blankCard);
+
+});
+
 // JS function to get what user inputs to new step
 function store(){
   var step = document.getElementById("step_input"+step_counter).value;
@@ -103,7 +109,7 @@ function hide(elem) {
     console.log(elem.parentNode.parentNode.id);
     var cardToDeleteID = "#"+(elem.parentNode.parentNode.id);
     $(cardToDeleteID).remove();
-    
+
     // This will remove specific step from database
     var IdToDelete = cardToDeleteID.replace ( /[^\d.]/g, '' );
     console.log(IdToDelete);
@@ -112,7 +118,7 @@ function hide(elem) {
 }
 
 
-$("#addcard").click(function(){
+$("#addCard").click(function(){
     console.log("Add Step Button Clicked!");
     tracker = ga.getAll()[0];
     tracker.send('event', 'button', 'click');
@@ -136,10 +142,8 @@ $(".btn-listener-2").click(function(){
 $(".btn-listener-3").click(function(){
     $("#card3").hide();
 });
- 
+
 $(".btn-listener-"+step_counter).click(function(){
     console.log("this ran");
     $("#card"+step_counter).hide();
 });*/
-
-
