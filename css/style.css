@@ -66,6 +66,9 @@ p{
 
 .masthead-brand-home h3{
   color: #fff;
+  font size: 48px;
+  font-family: 'avenir';
+  font-weight: 700;
 }
 
 .home h1 {
@@ -341,12 +344,10 @@ strong {
 	height:10px;
 }
 
-#card_container{
-  border-width: 5px;
-  border-color:black;
-  border-radius: 10px;
+.btn-outline-secondary {
+  color: black;
+  border-color: black;
 }
-
 
 /*
 #myModal{
