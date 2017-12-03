@@ -122,6 +122,10 @@ p{
 }
 
 
+.icon {
+  margin-left: 10px;
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -336,6 +340,13 @@ strong {
 .form-check {
 	height:10px;
 }
+
+#card_container{
+  border-width: 5px;
+  border-color:black;
+  border-radius: 10px;
+}
+
 
 /*
 #myModal{

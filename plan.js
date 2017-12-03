@@ -117,6 +117,9 @@ function hide(elem) {
     console.log("Step was Removed!");
 }
 
+$(".icon").hover(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
 $("#addCard2").click(function(){
     console.log("Add Step Button Clicked!");

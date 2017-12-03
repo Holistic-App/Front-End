@@ -92,6 +92,10 @@ $('input').click( function(){
 
 });
 
+$(".icon").hover(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
   // get box count
   var checkcount = 0;
   var checked = 0;
