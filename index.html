@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110455476-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-110455476-1');
+     </script>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -14,11 +23,10 @@
       };
       firebase.initializeApp(config);
 
-      
     </script>
     <script src = "main.js"></script>
 
-    <title>Hello, world!</title>
+    <title>Holistic, the Smart Planning App</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,11 +37,9 @@
     <!-- CSS Style -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
-
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:700|Open+Sans" rel="stylesheet">
+    </head>
   <body>
       <div class="container">
 
@@ -48,7 +54,9 @@
             <header class="masthead clearfix">
                       <div class="inner">
                         <div class=hometitle>
-                        <h3 class="masthead-brand">Holistic</h3>
+                        <h3 class="masthead-brand" style =  "color: #fff;
+                        font-family: 'Arima Madurai', cursive;                        
+                        font-weight: 700;font-size: 32px;"> Holistic</h3>
                         <nav class="nav nav-masthead">
                           <button class="btn btn-link" onclick="document.getElementById('id01').style.display='block'">Login</button>
                         </nav>
@@ -104,6 +112,7 @@
                   </div>
                   <button type="submit" onclick="store()" class="btn btn-primary">Enter</button>
 
+
                   <!-- Script to place goal name into local storage -->
                   <script>
                       function store(){
@@ -116,17 +125,28 @@
 
                 </div>
             </form>
-          </div>
-        </div>
-      </div>
 
 
-    <!-- Contaner and Wrapper -->
-      </div>
+            <div class="card border-light mb-3 homepage">
+    <div class="card-body">
+      <p class="card-text hometext">Holistic is a smart application that helps you break down and track your goals. We utilize data to give you recommendations that will help you achieve your goals faster and smarter.</p>
     </div>
   </div>
 
 
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+    <!-- Container and Wrapper -->
+      </div>
+    </div>
+  </div>
 
 
 

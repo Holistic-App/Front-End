@@ -10,22 +10,23 @@
 
       gtag('config', 'UA-110455476-1');
     </script>
-    </script>
+  </script>
 
   <!-- Google Analytics Content Experiment code -->
   <script>function utmx_section(){}function utmx(){}(function(){var
-      k='165483706-1',d=document,l=d.location,c=d.cookie;
-      if(l.search.indexOf('utm_expid='+k)>0)return;
-      function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-      indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-      length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-      '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-      '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-      '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-      valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-      '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-      </script><script>utmx('url','A/B');</script>
-      <!-- End of Google Analytics Content Experiment code -->
+  k='165483706-1',d=document,l=d.location,c=d.cookie;
+  if(l.search.indexOf('utm_expid='+k)>0)return;
+  function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+  indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+  length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+  '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+  '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+  '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+  valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+  '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+  </script><script>utmx('url','A/B');</script>
+  <!-- End of Google Analytics Content Experiment code -->
+
     <title>Plan your Goal!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -38,10 +39,12 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Font -->
+
     <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:700|Open+Sans" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
+
   <body>
 
     <div class="container">
@@ -49,9 +52,9 @@
   <!-- Header -->
       <header class="masthead clearfix">
                 <div class="inner">
-                  <h3 class="masthead-brand" ><a  style ="color:black;
-                    font-family: 'Arima Madurai', cursive;                        
-                    font-weight: 700; font-size: 32px;"href="index.html">Holistic</a></h3>
+                  <h3 class="masthead-brand"><a  style ="color:black;
+                  font-family: 'Arima Madurai', cursive;                        
+                  font-weight: 700; font-size: 32px;" href="index.html">Holistic</a></h3>
 
                 </div>
               </header>
@@ -60,7 +63,7 @@
   <div class="row justify-content-center">
   <div class="col-12 col-md-10">
     <h2 id="goal_name"></h2>
-    <h3> Let's help break down your goal into actionable tasks:</h3>
+    <h3>Other users are breaking down their goals into these steps:</h3>
 
 <!-- Card for Step #1 -->
 
@@ -69,8 +72,8 @@
 
   <div class="card" >
     <div class="card-header"  id="card1">
-        <span id="step_1"></span> <img class = "icon" data-toggle = "tooltip" data-placement = "right" 
-        title = "These are some suggested steps based on what other users have done"   class = "icon" src = "ic_stars_black_18px.svg"> <button type="button" class="btn btn-outline-danger btn-sm right btn-listener-1">X</button>
+        <span id="step_1"></span><img class = "icon" data-toggle = "tooltip" data-placement = "right" 
+        title = "These are some suggested steps based on what other users have done"  class = "icon" src = "ic_stars_black_18px.svg">
     </div>
   </div>
 
@@ -78,8 +81,8 @@
     <!-- Card for Step #2 -->
   <div class="card">
     <div class="card-header" id="card2">
-      <span id="step_2"></span> <img class = "icon" data-toggle = "tooltip" data-placement = "right" 
-      title = "These are some suggested steps based on what other users have done"   class = "icon" src = "ic_stars_black_18px.svg"><button type="button" class="btn btn-outline-danger btn-sm right btn-listener-2">X</button>
+      <span id="step_2"></span><img class = "icon" data-toggle = "tooltip" data-placement = "right" 
+      title = "These are some suggested steps based on what other users have done"  class = "icon" src = "ic_stars_black_18px.svg">
     </div>
   </div>
 
@@ -87,19 +90,22 @@
   <div class="card">
     <div class="card-header"  id="card3">
       <span id="step_3"></span> <img class = "icon" data-toggle = "tooltip" data-placement = "right" 
-      title = "These are some suggested steps based on what other users have done"   class = "icon" src = "ic_stars_black_18px.svg"><button type="button" class="btn btn-outline-danger btn-sm right btn-listener-3">X</button>
+      title = "These are some suggested steps based on what other users have done"  class = "icon" src = "ic_stars_black_18px.svg">
     </div>
   </div>
 
 </div>
 
-<!-- Add step button -->
-<a role="button" id="addCard2" class="btn btn-primary stepclick"><strong>+</strong>Add Step</a>
+<!-- Add step button
+<a role="button" id="addStepButton" class="btn btn-primary stepclick">+ Add Step</a> -->
+<div class="card">
+        <div class="card-header clickable"  id="addCard">
+          <span id="addStepButton" ><strong>+</strong> Add Step</span>
+        </div>
+</div>
 
 <!-- Create Goal Button -->
-<a href="overview.html" role="button" class="btn btn-outline-primary" style="float:right; margin-bottom: 100px;">Create Goal!</a>
-
-
+<a href="overview.html" role="button" class="btn btn-outline-primary" style=" margin-bottom: 100px;">Create Goal!</a>
 
     <!-- Container and Wrapper -->
       </div>
